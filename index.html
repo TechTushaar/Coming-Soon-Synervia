@@ -10,40 +10,57 @@
       padding: 0;
       box-sizing: border-box;
     }
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .background {
-      background: url('background.jpg') no-repeat center center/cover;
-      height: 100vh;
+    body {
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      color: white;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-      padding-bottom: 40px;
-      text-align: center;
+      align-items: center;
+      background: url('background.jpg') no-repeat top center/cover;
+    }
+    .background {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
     }
     .content {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px 30px;
-      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 25px;
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+      width: 100%;
+      max-width: 90%;
+      margin-bottom: 10vh;
     }
     .content h1 {
-      font-size: 2.2em;
+      font-size: 2em;
       margin-bottom: 10px;
     }
     .content p {
-      font-size: 1.1em;
+      font-size: 1em;
       margin: 5px 0;
+    }
+    .content a {
+      color: #fff;
+      text-decoration: underline;
     }
     @media (max-width: 600px) {
       .content h1 {
-        font-size: 1.6em;
+        font-size: 1.5em;
       }
       .content p {
-        font-size: 1em;
+        font-size: 0.95em;
+      }
+      .content {
+        margin-bottom: 5vh;
       }
     }
   </style>
@@ -53,7 +70,7 @@
     <div class="content">
       <h1>Coming Soon</h1>
       <p>Bringing innovation to health & wellness</p>
-      <p>Get in touch: <a href="mailto:info@synerviahealth.com" style="color: #fff; text-decoration: underline;">info@synerviahealth.com</a></p>
+      <p>Get in touch: <a href="mailto:info@synerviahealth.com">info@synerviahealth.com</a></p>
     </div>
   </div>
 </body>
