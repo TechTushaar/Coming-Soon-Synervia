@@ -1,77 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon - Synervia Health</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synervia Healthtech Pvt. Ltd.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('background.jpg') no-repeat top center/cover;
-    }
-    .background {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-    .content {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 25px;
-      border-radius: 12px;
-      color: white;
-      text-align: center;
-      width: 100%;
-      max-width: 90%;
-      margin-bottom: 10vh;
-    }
-    .content h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .content p {
-      font-size: 1em;
-      margin: 5px 0;
-    }
-    .content a {
-      color: #fff;
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      .content h1 {
-        font-size: 1.5em;
-      }
-      .content p {
-        font-size: 0.95em;
-      }
-      .content {
-        margin-bottom: 5vh;
-      }
+    :root {
+      --green-dark: #0a2713;
+      --green-light: #2bc121;
+      --green-mid: #1e491d;
     }
   </style>
 </head>
-<body>
-  <div class="background">
-    <div class="content">
-      <h1>Coming Soon</h1>
-      <p>Bringing innovation to health & wellness</p>
-      <p>Get in touch: <a href="mailto:info@synerviahealth.com">info@synerviahealth.com</a></p>
+<body class="font-sans text-gray-800">
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <img src="./assets/logo.svg" alt="Synervia Logo" class="h-10" />
+        <div class="hidden md:flex space-x-6">
+          <a href="#about" class="text-sm font-medium hover:text-green-light">About</a>
+          <a href="#products" class="text-sm font-medium hover:text-green-light">Products</a>
+          <a href="#infrastructure" class="text-sm font-medium hover:text-green-light">Infrastructure</a>
+          <a href="#models" class="text-sm font-medium hover:text-green-light">Business Models</a>
+          <a href="#process" class="text-sm font-medium hover:text-green-light">Process</a>
+          <a href="#contact" class="text-sm font-medium hover:text-green-light">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="nav-toggle" class="focus:outline-none">
+            <svg class="h-6 w-6 text-green-mid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="md:hidden hidden bg-white">
+      <a href="#about" class="block px-4 py-2 text-sm hover:bg-gray-100">About</a>
+      <a href="#products" class="block px-4 py-2 text-sm hover:bg-gray-100">Products</a>
+      <a href="#infrastructure" class="block px-4 py-2 text-sm hover:bg-gray-100">Infrastructure</a>
+      <a href="#models" class="block px-4 py-2 text-sm hover:bg-gray-100">Business Models</a>
+      <a href="#process" class="block px-4 py-2 text-sm hover:bg-gray-100">Process</a>
+      <a href="#contact" class="block px-4 py-2 text-sm hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="pt-24 bg-[url('../mnt/data/background.jpg')] bg-cover bg-center text-white text-center">
+    <div class="bg-[rgba(10,39,19,0.6)] py-28 md:py-32">
+      <img src="./assets/logo-white.svg" alt="Synervia Logo" class="mx-auto mb-4 h-14 md:h-16" />
+      <h1 class="text-3xl md:text-5xl font-bold">Unlocking Nature’s Formula for You</h1>
+      <p class="mt-2 md:mt-4 text-base md:text-xl">Next-Gen Nutraceutical Manufacturing in Vizag</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-green-dark">About Synervia</h2>
+      <p class="mt-4 text-center text-sm md:text-base">Synervia Healthtech Pvt. Ltd. is a state-of-the-art nutraceutical formulation and manufacturing venture based in Vizag. We blend cutting-edge technology with nature’s best to deliver high-quality tablets, capsules, oral liquids, and powders.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-green-dark">Products & Forms</h2>
+      <div class="mt-6 md:mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="text-center">
+          <div class="text-green-light text-3xl md:text-4xl">💊</div>
+          <h3 class="mt-2 font-semibold text-sm md:text-base">Tablets & Capsules</h3>
+        </div>
+        <div class="text-center">
+          <div class="text-green-light text-3xl md:text-4xl">💧</div>
+          <h3 class="mt-2 font-semibold text-sm md:text-base">Oral Liquids</h3>
+        </div>
+        <div class="text-center">
+          <div class="text-green-light text-3xl md:text-4xl">🧂</div>
+          <h3 class="mt-2 font-semibold text-sm md:text-base">Powders & Sachets</h3>
+        </div>
+        <div class="text-center">
+          <div class="text-green-light text-3xl md:text-4xl">🏭</div>
+          <h3 class="mt-2 font-semibold text-sm md:text-base">Custom Formulations</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infrastructure Section -->
+  <section id="infrastructure" class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-green-dark">Our Infrastructure & Capacity</h2>
+      <div class="mt-6 md:mt-8 grid gap-4 md:gap-6 sm:grid-cols-2">
+        <div class="flex items-start">
+          <span class="text-green-light text-xl md:text-2xl mr-2">✔️</span>
+          <p class="text-sm md:text-base">78M tablets & capsules per month</p>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-light text-xl md:text-2xl mr-2">✔️</span>
+          <p class="text-sm md:text-base">18.72M bottles & sachets per month</p>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-light text-xl md:text-2xl mr-2">✔️</span>
+          <p class="text-sm md:text-base">ISO & FSSAI certified facility</p>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-light text-xl md:text-2xl mr-2">✔️</span>
+          <p class="text-sm md:text-base">Effluent Treatment & Sustainable Practices</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Models Section -->
+  <section id="models" class="py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-green-dark">Business Models</h2>
+      <div class="mt-6 md:mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="p-4 md:p-6 border rounded-lg">
+          <h3 class="font-semibold text-sm md:text-base">B2B Job Work</h3>
+          <p class="text-xs md:text-sm mt-1">Contract manufacturing for branded companies and exporters.</p>
+        </div>
+        <div class="p-4 md:p-6 border rounded-lg">
+          <h3 class="font-semibold text-sm md:text-base">B2C Brand</h3>
+          <p class="text-xs md:text-sm mt-1">Building Synervia’s own portfolio via distributors & MRs.</p>
+        </div>
+        <div class="p-4 md:p-6 border rounded-lg">
+          <h3 class="font-semibold text-sm md:text-base">Institutional & Export</h3>
+          <p class="text-xs md:text-sm mt-1">Direct tenders to government & international markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contract Process Section -->
+  <section id="process" class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-green-dark">Our Contract Process</h2>
+      <div class="mt-6 md:mt-8 space-y-4">
+        <div>
+          <h3 class="font-semibold text-sm md:text-base">1. Inquiry & Consultation</h3>
+          <p class="text-xs md:text-sm mt-1">Reach out via email or phone to discuss your requirements and timelines.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm md:text-base">2. Formulation & Sampling</h3>
+          <p class="text-xs md:text-sm mt-1">We develop pilot samples for your approval, ensuring quality and compliance.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm md:text-base">3. Production & QC</h3>
+          <p class="text-xs md:text-sm mt-1">Once samples are approved, we initiate full-scale manufacturing under cGMP standards.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm md:text-base">4. Packaging & Delivery</h3>
+          <p class="text-xs md:text-sm mt-1">Products are packaged per your specifications and delivered on schedule.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm md:text-base">5. Ongoing Support</h3>
+          <p class="text-xs md:text-sm mt-1">We provide post-delivery support, regulatory updates, and continuous improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 md:py-16">
+    <div class="max-w-md mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-green-dark">Get In Touch</h2>
+      <p class="mt-3 text-sm md:text-base">info@synerviahealth.com | +91 9023266655</p>
+      <p class="mt-1 text-xs md:text-sm">Ground Floor, Landmark Hotel, Dolphin Circle, Dabagardens, Visakhapatnam - 20</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-dark text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center text-xs md:text-sm">
+      &copy; 2025 Synervia Healthtech Pvt. Ltd. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
